@@ -1,0 +1,7 @@
+{
+  "/api*": {
+      "target":"http://localhost:4200/accounts",
+      "secure":false,
+      "logLevel":"debug"
+      }
+  }

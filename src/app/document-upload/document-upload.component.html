@@ -1,0 +1,103 @@
+<!--document upload page-->
+
+<ngx-spinner type="ball-pulse-sync" color="black">
+  <p style="font-size: 20px; color: black">'Please wait...'</p>
+</ngx-spinner>
+<style>
+  .inner-text-area{
+    margin-top:60px;
+  }
+  .footer{
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+  }
+
+  </style>
+
+
+
+  <div class="container outer h-75">
+    <div class="row justify-content-between">
+    <div>
+      <h1>THE WRITING LAB</h1>
+    </div>
+    <div>
+    <app-drop-down></app-drop-down>
+  </div>
+    <!-- <div>
+      <h5 *ngIf="user">{{user.first_name}} {{user.last_name}}</h5>
+      <div class="border border-secondary rounded text-center">
+        <p class="my-2"><a>Profile</a></p>
+        <p class="my-2" (click)="logout()"><a>logout</a></p>
+      </div>
+
+      </div> -->
+
+      <!-- <div class="dropdown mt-2">
+        <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Username
+        </button>
+        <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" href="#">Logout    </a>
+        </div>
+      </div> -->
+
+
+
+
+
+    </div>
+    <form  #form="ngForm">
+    <div class="row inner-text-area">
+      <textarea required #text_a ="ngModel" name = "text" [(ngModel)] = "text" class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+    </div>
+  </form>
+    <div class="row w-100 justify-content-center">
+
+    <button [disabled]="form.invalid" mat-stroked-button class="mt-2" (click)="submit()">Submit</button>
+    </div>
+  </div>
+
+  <div class="w-100 footer">
+    <div class="container">
+  <div class="row w-100">
+    <div class="col-lg-4 col-md-8 col-12">
+      <h3><u>About The Writing Lab</u></h3>
+      <p><a>About Us</a></p>
+        <p><a>Contact Us</a></p>
+      </div>
+      <div class="col-lg-2 col-md-4 col-12">
+        <h3><u>Products</u></h3>
+        <p><a>Right</a></p>
+        <p><a>Left</a></p>
+        <p><a>Right</a></p>
+        <p><a>Left</a></p>
+      </div>
+      <div class="col-lg-2 col-md-4 col-12">
+        <h3><u>Features</u></h3>
+      </div>
+      <div class="col-lg-2 col-md-4 col-12">
+        <h3><u>Support</u></h3>
+        <p><a>Help Center</a></p>
+        <p><a>Privacy Policy</a></p>
+        <p><a>Terms of Services</a></p>
+      </div>
+      <div class="col-lg-2 col-md-4 col-12">
+        <h3><u>Community</u></h3>
+        <p><a>Facebook</a></p>
+        <p><a>Instagram</a></p>
+        <p><a>Twitter</a></p>
+      </div>
+  </div>
+
+
+  </div>
+  </div>
+  <div class="container">
+  <div class="row w-100 justify-content-center">
+    <p class="text-center">
+      @copyright.
+    </p>
+  </div>
+  </div>

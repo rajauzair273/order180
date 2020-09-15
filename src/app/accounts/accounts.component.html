@@ -1,0 +1,104 @@
+
+
+<style>
+
+  mat-form-field {
+    margin-right: 12px;
+  }
+  </style>
+
+<ngx-spinner type="ball-pulse-sync" color="black">
+  <p style="font-size: 20px; color: black">'Please wait...'</p>
+</ngx-spinner>
+
+  <div class="container">
+    <h1>The Writing Lab</h1>
+    <p class="text-center mt-4">Lets create your account</p>
+  <div class="jumbotron">
+    <mat-tab-group>
+      <mat-tab label="LogIn" >
+        <form #l_form="ngForm">
+          <div class="form-group px-4">
+            <input  required type="email" name="email" [(ngModel)]="login_d.email" class="form-control mt-4"  placeholder="Email"#email_l = "ngModel">
+            <span  class=" red help-block" *ngIf="email_l.invalid && email_l.touched">
+              Email is required
+            </span>
+            <input required  type="password" name="password" [(ngModel)]="login_d.password" class="form-control mt-4"  placeholder="Password" #pass_l = "ngModel">
+            <span  class=" red help-block" *ngIf="pass_l.invalid && pass_l.touched">
+              Password is required
+            </span>
+            <br *ngIf="pass_l.invalid && pass_l.touched">
+            <a (click)="forget()"  class="mt-4">Forgot Password?</a>
+            </div>
+
+        </form>
+        <div class="container">
+          <div class="row float-right px-4">
+            <!-- <button mat-stroked-button class="mx-4" (click)="()">Cancel</button> -->
+            <button mat-stroked-button [disabled]="l_form.invalid" (click)="login()">Submit</button>
+
+            </div>
+          </div>
+      </mat-tab>
+      <mat-tab label="SignUp">
+        <form #user_form="ngForm">
+          <div class="form-group px-4"  >
+            <input required type="text" name="first_name" [(ngModel)]="sign_up.first_name" class="form-control mt-4"  placeholder="First Name" #firstname="ngModel">
+            <span  class=" red help-block" *ngIf="firstname.invalid && firstname.touched">
+              First name is required
+            </span>
+          </div>
+          <div class="form-group px-4">
+            <input required type="text" name="last_name"  [(ngModel)]="sign_up.last_name" class="form-control mt-4"  placeholder="Last Name" #lastname="ngModel">
+
+            <span  class=" red help-block" *ngIf="lastname.invalid && lastname.touched">
+            Last Name is required
+            </span>
+          </div>
+          <div class="form-group px-4">
+
+            <div class="row mt-4">
+              <span class="mt-2 ml-4">Birthday</span>
+              <div class="col">
+                <input required type="date" [(ngModel)]="sign_up.bd" name = "bd" #db_s = "ngModel" class="form-control" >
+                <span  class=" red help-block" *ngIf="db_s.invalid && db_s.touched">
+                   Birth day is required
+                  </span>
+              </div>
+
+              </div>
+          </div>
+          <div class="form-group px-4">
+
+
+            <input  required type="email" class="form-control mt-4" name="email" [(ngModel)]="sign_up.email" #email_v = "ngModel"  placeholder="Email" >
+            <span  class=" red help-block" *ngIf="email_v.invalid && email_v.touched">
+             Email is required
+             </span>
+          </div>
+          <div class="form-group px-4">
+            <input required type="password" class="form-control mt-4" name="password"  [(ngModel)]="sign_up.password" #pass="ngModel"  placeholder="Password">
+            <span  class=" red help-block" *ngIf="pass.invalid && pass.touched">
+              Password is Required
+                </span>
+          </div>
+          <div class="form-group px-4">
+            <input required type="password" class="form-control mt-4" name="c_password" [(ngModel)]="sign_up.c_password" #pass_c="ngModel"  placeholder="Confirm Password">
+            <span  class="red help-block" *ngIf="pass_c.invalid && pass_c.touched">
+            Confirm Password is Required
+              </span>
+            </div>
+
+        </form>
+        <div class="container">
+          <div class="row float-right px-4">
+            <button mat-stroked-button class="mx-4" (click)="clear()">Cancel</button>
+            <button mat-stroked-button [disabled]="user_form.invalid"  (click)="signup()">Submit</button>
+
+            </div>
+          </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  </div>
+

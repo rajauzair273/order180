@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-tab-label {
+  width: 50%!important;}
+  a:hover{
+    cursor:pointer !important;
+    transform: scale(0.98) !important;
+          /* Scaling button to 0.98 to its original size */
+          box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24) !important;
+          /* Lowering the shadow */
+  }
+  .border-secondary{
+    cursor:pointer !important;
+
+  }
+  .border-secondary:hover{
+    transform: scale(0.98) !important;
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24) !important;
+    /* Lowering the shadow */
+  }
+
+
+
+
+.jumbotron{
+  margin-left:100px;
+  margin-right: 100px;
+}
+@media (max-width: 767px) {
+  .jumbotron{
+    margin-left:0px;
+    margin-right: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .jumbotron{
+    margin-left:50px;
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .jumbotron{
+    margin-left:100px;
+    margin-right: 100px;
+  }
+}

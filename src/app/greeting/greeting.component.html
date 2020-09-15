@@ -1,0 +1,111 @@
+<!--greeting-page-->
+
+<style>
+  .inner-text{
+    margin-top:100px;
+  }
+  .footer{
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+  }
+
+  </style>
+
+
+
+  <div class="container h-75">
+    <div class="row justify-content-between">
+    <div>
+      <h1>THE WRITING LAB</h1>
+    </div>
+    <!-- <div>
+      <h5 *ngIf="user">{{user.first_name}} {{user.last_name}}</h5>
+      <div class="border border-secondary rounded text-center">
+        <p class="my-2"><a>Profile</a></p>
+        <p class="my-2" (click)="logout()"><a>logout</a></p>
+      </div>
+
+      </div> -->
+      <app-drop-down></app-drop-down>
+    </div>
+    <div class="row w-100 text-center justify-content-center inner-text">
+      <p class="text-center">
+        Hello, (nazar ni a raha kya a)!<br>
+        Welcome to The Writing Lab. what can we help you with?
+      </p>
+
+    </div>
+    <div class="row mt-4" >
+      <div class="col-12 col-md-4 text-center mt-2" (click)="uploadpage()">
+        <div class="border border-secondary rounded text-center">
+          <p class="my-3">Academic Writing</p>
+        </div>
+
+  <!--button-->
+<!--
+        <button mat-stroked-button class="px-4 block">Academic Writing</button> -->
+
+      </div>
+      <div class="col-12 col-md-4 text-center mt-2" (click)="uploadpage()">
+        <div class="border border-secondary rounded text-center">
+          <p  class="my-3">Business Writing</p>
+        </div>
+
+  <!--button-->
+  <!--
+        <button mat-stroked-button class="px-4">Business Writing</button>-->
+
+      </div>
+      <div class="col-12 col-md-4 text-center mt-2" (click)="uploadpage()">
+        <div class="border border-secondary rounded text-center">
+          <p  class="my-3"> <a>Personel Writing</a></p>
+        </div>
+  <!--button-->
+  <!--
+        <button mat-stroked-button class="px-4">Personel Writing</button>-->
+      </div>
+    </div>
+  </div>
+
+  <div class="w-100 footer">
+    <div class="container">
+  <div class="row w-100">
+    <div class="col-lg-4 col-md-8 col-12">
+      <h3><u>About The Writing Lab</u></h3>
+      <p><a>About Us</a></p>
+      <p><a>Contact Us</a></p>
+    </div>
+    <div class="col-lg-2 col-md-4 col-12">
+      <h3><u>Products</u></h3>
+      <p><a>Right</a></p>
+      <p><a>Left</a></p>
+      <p><a>Right</a></p>
+      <p><a>Left</a></p>
+    </div>
+    <div class="col-lg-2 col-md-4 col-12">
+      <h3><u>Features</u></h3>
+    </div>
+    <div class="col-lg-2 col-md-4 col-12">
+      <h3><u>Support</u></h3>
+      <p><a>Help Center</a></p>
+      <p><a>Privacy Policy</a></p>
+      <p><a>Terms of Services</a></p>
+    </div>
+    <div class="col-lg-2 col-md-4 col-12">
+      <h3><u>Community</u></h3>
+      <p><a>Facebook</a></p>
+      <p><a>Instagram</a></p>
+      <p><a>Twitter</a></p>
+    </div>
+  </div>
+
+
+  </div>
+  </div>
+  <div class="container">
+  <div class="row w-100 justify-content-center">
+    <p class="text-center">
+      @copyright.
+    </p>
+  </div>
+  </div>

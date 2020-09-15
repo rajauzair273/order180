@@ -1,0 +1,33 @@
+
+<ngx-spinner type="ball-pulse-sync" color="black">
+<p style="font-size: 20px; color: black">'Please wait...'</p>
+</ngx-spinner>
+<div class="container">
+  <h1>The Writing Lab</h1>
+<div class="jumbotron">
+
+  <form #form_f="ngForm">
+    <div class="form-group px-4">
+      <p>Reset Password</p>
+      <input required type="email" [(ngModel)]="reset_pass.email" name="email" class="form-control mt-4"  placeholder="Email" #email_f="ngModel">
+      <span  class=" red help-block" *ngIf="email_f.invalid && email_f.touched">
+        Email is required
+      </span>
+
+      <input required type="password" name="password"  [(ngModel)]="reset_pass.password" class="form-control mt-4"  placeholder="New Password" #pass_f="ngModel">
+      <span  class=" red help-block" *ngIf="pass_f.invalid && pass_f.touched">
+        Password is required
+      </span>
+
+      <input required type="password" name="c_password"  [(ngModel)]="reset_pass.c_password" class="form-control mt-4"  placeholder="Confirm Password" #pass_c="ngModel">
+      <span  class=" red help-block" *ngIf="pass_c.invalid && pass_c.touched">
+       Confirm Password  is required
+      </span>
+    </div>
+    </form>
+    <div class="row float-right px-4 mx-2">
+      <button mat-stroked-button [disabled]="form_f.invalid" (click)="reset()">Submit</button>
+
+      </div>
+</div>
+</div>
